@@ -7,6 +7,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [
   { src: gallery1, alt: "Bartender pouring drinks at Shot Cafe" },
@@ -21,6 +22,7 @@ const Gallery = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -32,9 +34,9 @@ const Gallery = () => {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Vibes</span>
+            <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">{t("gallery.tag")}</span>
             <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
-              The <span className="text-whiskey">Gallery</span>
+              {t("gallery.title1")} <span className="text-whiskey">{t("gallery.title2")}</span>
             </h2>
           </motion.div>
 

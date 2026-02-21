@@ -1,12 +1,15 @@
 import logo from "@/assets/logo.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
+  const { t } = useLanguage();
+
   const links = [
-    { label: "About", href: "#about" },
-    { label: "Menu", href: "#menu" },
-    { label: "Gallery", href: "#gallery" },
-    
-    { label: "Contact", href: "#location" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.menu"), href: "#menu" },
+    { label: t("nav.gallery"), href: "#gallery" },
+    { label: t("nav.contact"), href: "#location" },
   ];
 
   return (
@@ -29,12 +32,15 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <a
-          href="#location"
-          className="hidden md:inline-flex px-5 py-2 text-sm font-display rounded-md gradient-whiskey text-primary-foreground hover:opacity-90 transition-all"
-        >
-          Get Directions
-        </a>
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <a
+            href="#location"
+            className="hidden md:inline-flex px-5 py-2 text-sm font-display rounded-md gradient-whiskey text-primary-foreground hover:opacity-90 transition-all"
+          >
+            {t("nav.directions")}
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -1,15 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Music, Sparkles } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const About = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const features = [
-    { icon: Sparkles, title: "50+ Shots", desc: "Signature, classic, and cocktail shots crafted to perfection" },
-    { icon: Users, title: "Party Vibes", desc: "Friendly bartenders and the best crowd in Old Town" },
-    { icon: Music, title: "Live Music", desc: "Country jams and live sets every weekend to keep the energy high" },
+    { icon: Sparkles, title: t("about.feat1.title"), desc: t("about.feat1.desc") },
+    { icon: Users, title: t("about.feat2.title"), desc: t("about.feat2.desc") },
+    { icon: Music, title: t("about.feat3.title"), desc: t("about.feat3.desc") },
   ];
 
   return (
@@ -21,14 +23,12 @@ const About = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Est. Riga</span>
+          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">{t("about.tag")}</span>
           <h2 className="font-display text-3xl md:text-5xl mt-2 mb-6 text-cream">
-            Where Every Night Is <span className="text-whiskey">Legendary</span>
+            {t("about.title1")} <span className="text-whiskey">{t("about.title2")}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-body leading-relaxed">
-            Tucked away in the cobblestone streets of Riga's Old Town, Shot Cafe has been the go-to 
-            destination for travelers, students, and locals craving unforgettable nights since day one. 
-            No pretense — just great drinks, great music, and even greater memories.
+            {t("about.desc")}
           </p>
         </motion.div>
 

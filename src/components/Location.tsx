@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Clock, Phone, Instagram, Facebook } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Location = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="location" className="py-24 px-4" ref={ref}>
@@ -15,9 +17,9 @@ const Location = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Find Us</span>
+          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">{t("location.tag")}</span>
           <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
-            Visit <span className="text-whiskey">Shot Cafe</span>
+            {t("location.title1")} <span className="text-whiskey">{t("location.title2")}</span>
           </h2>
         </motion.div>
 
@@ -50,7 +52,7 @@ const Location = () => {
                 <MapPin className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-display text-base mb-1 text-cream">Address</h3>
+                <h3 className="font-display text-base mb-1 text-cream">{t("location.address")}</h3>
                 <p className="text-muted-foreground font-body">Old Town, Riga, Latvia<br />Kaļķu iela 20, Centra rajons, Rīga, LV-1050</p>
               </div>
             </div>
@@ -60,11 +62,11 @@ const Location = () => {
                 <Clock className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-display text-base mb-1 text-cream">Opening Hours</h3>
+                <h3 className="font-display text-base mb-1 text-cream">{t("location.hours")}</h3>
                 <div className="text-muted-foreground font-body text-sm space-y-1">
-                  <p>Mon – Thu: 18:00 – 02:00</p>
-                  <p>Fri – Sat: 18:00 – 05:00</p>
-                  <p>Sunday: 19:00 – 01:00</p>
+                  <p>{t("location.monThu")}</p>
+                  <p>{t("location.friSat")}</p>
+                  <p>{t("location.sun")}</p>
                 </div>
               </div>
             </div>
@@ -74,7 +76,7 @@ const Location = () => {
                 <Phone className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-display text-base mb-1 text-cream">Contact</h3>
+                <h3 className="font-display text-base mb-1 text-cream">{t("location.contact")}</h3>
                 <p className="text-muted-foreground font-body text-sm">+371 2X XXX XXX</p>
                 <div className="flex gap-4 mt-3">
                   <a href="#" className="text-muted-foreground hover:text-whiskey transition-colors" aria-label="Instagram">

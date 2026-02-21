@@ -1,14 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Flame, Wine, Beer, Sparkles, Zap } from "lucide-react";
-
-const categories = [
-  { id: "signature", label: "Signature Shots", icon: Flame },
-  { id: "classic", label: "Classic Shots", icon: Zap },
-  { id: "cocktail-shots", label: "Cocktail Shots", icon: Sparkles },
-  { id: "cocktails", label: "Cocktails", icon: Wine },
-  { id: "beer", label: "Beer", icon: Beer },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const menuItems: Record<string, { name: string; price: string; desc: string }[]> = {
   signature: [
@@ -48,10 +41,24 @@ const menuItems: Record<string, { name: string; price: string; desc: string }[]>
   ],
 };
 
+const categoryIcons = [
+  { id: "signature", icon: Flame },
+  { id: "classic", icon: Zap },
+  { id: "cocktail-shots", icon: Sparkles },
+  { id: "cocktails", icon: Wine },
+  { id: "beer", icon: Beer },
+];
+
 const Menu = () => {
   const [active, setActive] = useState("signature");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const categories = categoryIcons.map((c) => ({
+    ...c,
+    label: t(`menu.cat.${c.id}`),
+  }));
 
   return (
     <section id="menu" className="py-24 px-4" ref={ref}>
@@ -62,9 +69,9 @@ const Menu = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Drinks</span>
+          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">{t("menu.tag")}</span>
           <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
-            The <span className="text-whiskey">Menu</span>
+            {t("menu.title1")} <span className="text-whiskey">{t("menu.title2")}</span>
           </h2>
         </motion.div>
 
@@ -119,7 +126,7 @@ const Menu = () => {
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-md rustic-card border-whiskey/20">
             <Sparkles className="w-5 h-5 text-rust" />
             <span className="text-sm font-body text-muted-foreground">
-              Can't decide? Ask your bartender for a <span className="text-whiskey font-semibold">surprise shot!</span>
+              {t("menu.surprise")} <span className="text-whiskey font-semibold">{t("menu.surpriseShot")}</span>
             </span>
           </div>
         </motion.div>

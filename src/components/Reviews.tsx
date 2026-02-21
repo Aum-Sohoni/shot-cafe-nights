@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Star } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const reviews = [
   { text: "Best shot bar in Riga! The bartenders are so fun, we ended up staying until 4am.", author: "Sarah K.", from: "London, UK" },
@@ -12,6 +13,7 @@ const reviews = [
 const Reviews = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section className="py-24 px-4" ref={ref}>
@@ -22,9 +24,9 @@ const Reviews = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Reviews</span>
+          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">{t("reviews.tag")}</span>
           <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
-            What They <span className="text-whiskey">Say</span>
+            {t("reviews.title1")} <span className="text-whiskey">{t("reviews.title2")}</span>
           </h2>
         </motion.div>
 
