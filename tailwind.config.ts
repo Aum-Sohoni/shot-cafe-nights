@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        display: ["Rye", "cursive"],
+        body: ["Bitter", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,12 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        neon: {
-          gold: "hsl(var(--neon-gold))",
-          amber: "hsl(var(--neon-amber))",
-          cream: "hsl(var(--neon-cream))",
-          dark: "hsl(var(--neon-dark))",
-        },
+        whiskey: "hsl(var(--whiskey))",
+        leather: "hsl(var(--leather))",
+        rust: "hsl(var(--rust))",
+        cream: "hsl(var(--cream))",
+        wood: "hsl(var(--wood))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -86,30 +85,16 @@ export default {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "glow-pulse": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.6" },
-        },
         "float": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "neon-flicker": {
-          "0%, 100%": { opacity: "1" },
-          "92%": { opacity: "1" },
-          "93%": { opacity: "0.3" },
-          "94%": { opacity: "1" },
-          "96%": { opacity: "0.5" },
-          "97%": { opacity: "1" },
+          "50%": { transform: "translateY(-8px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.6s ease-out forwards",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
-        "neon-flicker": "neon-flicker 4s ease-in-out infinite",
       },
     },
   },

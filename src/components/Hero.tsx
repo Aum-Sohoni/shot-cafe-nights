@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Shot Cafe nightlife atmosphere" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        <img src={heroBg} alt="Shot Cafe western saloon atmosphere" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -26,8 +26,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 text-sm text-muted-foreground">
-            <MapPin className="w-4 h-4 text-neon-gold" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full rustic-card mb-6 text-sm text-muted-foreground">
+            <MapPin className="w-4 h-4 text-whiskey" />
             Old Town Riga, Latvia
           </div>
         </motion.div>
@@ -36,10 +36,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
+          className="font-display text-4xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-cream"
         >
           Riga's Ultimate{" "}
-          <span className="neon-text-gold animate-neon-flicker">Shot</span>{" "}
+          <span className="text-whiskey">Shot</span>{" "}
           Experience
         </motion.h1>
 
@@ -61,13 +61,13 @@ const Hero = () => {
         >
           <a
             href="#menu"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold text-primary-foreground gradient-gold hover:opacity-90 transition-all neon-glow-gold"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md font-display text-primary-foreground gradient-whiskey hover:opacity-90 transition-all warm-shadow"
           >
             View Menu
           </a>
           <a
             href="#location"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold glass-card text-foreground hover:border-neon-gold/50 transition-all"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md font-display rustic-card text-foreground hover:border-whiskey/50 transition-all"
           >
             <Clock className="w-4 h-4 mr-2" />
             Visit Us Tonight
