@@ -64,7 +64,7 @@ const Menu = () => {
         >
           <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Drinks</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-            The <span className="neon-text-pink">Menu</span>
+            The <span className="neon-text-gold">Menu</span>
           </h2>
         </motion.div>
 
@@ -81,8 +81,8 @@ const Menu = () => {
               onClick={() => setActive(cat.id)}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-display text-sm font-medium transition-all duration-300 ${
                 active === cat.id
-                  ? "gradient-neon text-primary-foreground neon-glow-pink"
-                  : "glass-card text-muted-foreground hover:text-foreground hover:border-neon-pink/30"
+                  ? "gradient-gold text-primary-foreground neon-glow-gold"
+                  : "glass-card text-muted-foreground hover:text-foreground hover:border-neon-gold/30"
               }`}
             >
               <cat.icon className="w-4 h-4" />
@@ -99,10 +99,10 @@ const Menu = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="glass-card rounded-xl p-6 group hover:border-neon-pink/40 transition-all duration-300 cursor-default"
+              className="glass-card rounded-xl p-6 group hover:border-neon-gold/40 transition-all duration-300 cursor-default"
             >
               <div className="flex items-start justify-between mb-2">
-                <h3 className="font-display font-bold text-lg group-hover:neon-text-pink transition-all duration-300">
+                <h3 className="font-display font-bold text-lg group-hover:neon-text-gold transition-all duration-300">
                   {item.name}
                 </h3>
                 <span className="text-neon-amber font-display font-bold text-lg shrink-0 ml-3">{item.price}</span>

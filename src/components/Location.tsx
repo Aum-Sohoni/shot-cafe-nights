@@ -17,7 +17,7 @@ const Location = () => {
         >
           <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Find Us</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-            Visit <span className="neon-text-pink">Shot Cafe</span>
+            Visit <span className="neon-text-gold">Shot Cafe</span>
           </h2>
         </motion.div>
 
@@ -48,7 +48,7 @@ const Location = () => {
             className="flex flex-col justify-center gap-8"
           >
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg gradient-neon flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center shrink-0">
                 <MapPin className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
@@ -58,7 +58,7 @@ const Location = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg gradient-neon flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center shrink-0">
                 <Clock className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
@@ -72,17 +72,17 @@ const Location = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg gradient-neon flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center shrink-0">
                 <Phone className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg mb-1">Contact</h3>
                 <p className="text-muted-foreground font-body text-sm">+371 2X XXX XXX</p>
                 <div className="flex gap-4 mt-3">
-                  <a href="#" className="text-muted-foreground hover:text-neon-pink transition-colors" aria-label="Instagram">
+                  <a href="#" className="text-muted-foreground hover:text-neon-gold transition-colors" aria-label="Instagram">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-neon-pink transition-colors" aria-label="Facebook">
+                  <a href="#" className="text-muted-foreground hover:text-neon-gold transition-colors" aria-label="Facebook">
                     <Facebook className="w-5 h-5" />
                   </a>
                 </div>
