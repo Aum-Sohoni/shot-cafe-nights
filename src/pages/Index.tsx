@@ -8,7 +8,7 @@ import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
-import ShotOfTheDay from "@/components/ShotOfTheDay";
+
 
 const Index = () => {
   return (
@@ -23,7 +23,7 @@ const Index = () => {
       <Location />
       <Footer />
       <MobileCTA />
-      <ShotOfTheDay />
+      
     </div>
   );
 };
