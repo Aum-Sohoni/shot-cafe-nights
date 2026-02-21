@@ -5,16 +5,12 @@ import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
 
 const images = [
-  { src: gallery1, alt: "Whiskey shots on wooden bar" },
-  { src: gallery2, alt: "Cowboy bartender mixing drinks" },
-  { src: gallery3, alt: "Friends toasting at the saloon" },
-  { src: gallery4, alt: "Bar counter with craft cocktails" },
-  { src: gallery5, alt: "Live country music at Shot Cafe" },
-  { src: gallery6, alt: "Rustic saloon interior" },
+  { src: gallery1, alt: "Bartender pouring drinks at Shot Cafe" },
+  { src: gallery2, alt: "Shot Cafe branded hoodie" },
+  { src: gallery3, alt: "Layered shots on wooden board" },
+  { src: gallery4, alt: "Busy night at Shot Cafe" },
 ];
 
 const Gallery = () => {
@@ -38,7 +34,7 @@ const Gallery = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             {images.map((img, i) => (
               <motion.div
                 key={i}
