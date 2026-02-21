@@ -37,7 +37,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-body"
+          className="text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-8 font-body drop-shadow-lg"
+          style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}
         >
           50+ signature shots, craft cocktails, and unforgettable nights in the heart of Old Town. 
           Where every round starts a new story.
