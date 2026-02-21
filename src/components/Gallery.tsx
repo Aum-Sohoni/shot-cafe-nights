@@ -9,12 +9,12 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
 const images = [
-  { src: gallery1, alt: "Colorful cocktail shots" },
-  { src: gallery2, alt: "Bartender pouring flaming shots" },
-  { src: gallery3, alt: "Friends toasting shots" },
-  { src: gallery4, alt: "Bar counter with drinks" },
-  { src: gallery5, alt: "DJ at Shot Cafe" },
-  { src: gallery6, alt: "Neon-lit bar interior" },
+  { src: gallery1, alt: "Whiskey shots on wooden bar" },
+  { src: gallery2, alt: "Cowboy bartender mixing drinks" },
+  { src: gallery3, alt: "Friends toasting at the saloon" },
+  { src: gallery4, alt: "Bar counter with craft cocktails" },
+  { src: gallery5, alt: "Live country music at Shot Cafe" },
+  { src: gallery6, alt: "Rustic saloon interior" },
 ];
 
 const Gallery = () => {
@@ -32,9 +32,9 @@ const Gallery = () => {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Vibes</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-              The <span className="neon-text-gold">Gallery</span>
+            <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Vibes</span>
+            <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
+              The <span className="text-whiskey">Gallery</span>
             </h2>
           </motion.div>
 
@@ -45,7 +45,7 @@ const Gallery = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+                className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
                 onClick={() => setLightbox(i)}
               >
                 <img
@@ -61,7 +61,6 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Lightbox */}
       {lightbox !== null && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -72,14 +71,14 @@ const Gallery = () => {
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-6 right-6 p-2 rounded-full glass-card text-foreground hover:text-neon-gold transition-colors"
+            className="absolute top-6 right-6 p-2 rounded-full rustic-card text-foreground hover:text-whiskey transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
           <img
             src={images[lightbox].src}
             alt={images[lightbox].alt}
-            className="max-w-full max-h-[85vh] rounded-xl object-contain"
+            className="max-w-full max-h-[85vh] rounded-lg object-contain"
           />
         </motion.div>
       )}

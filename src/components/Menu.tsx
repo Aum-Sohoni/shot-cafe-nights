@@ -34,9 +34,9 @@ const menuItems: Record<string, { name: string; price: string; desc: string }[]>
     { name: "Espresso Martini Shot", price: "€4.50", desc: "Vodka, espresso, coffee liqueur" },
   ],
   cocktails: [
-    { name: "Neon Margarita", price: "€9.00", desc: "Tequila, lime, agave with pink salt rim" },
+    { name: "Saloon Margarita", price: "€9.00", desc: "Tequila, lime, agave with a salt rim" },
     { name: "Old Town Mule", price: "€8.50", desc: "Vodka, ginger beer, lime, served in copper" },
-    { name: "Shot Cafe Spritz", price: "€8.00", desc: "Aperol, prosecco, soda with a neon twist" },
+    { name: "Shot Cafe Spritz", price: "€8.00", desc: "Aperol, prosecco, soda with a twist" },
     { name: "Dark & Stormy", price: "€9.00", desc: "Dark rum, ginger beer, fresh lime" },
     { name: "Passionfruit Martini", price: "€10.00", desc: "Vanilla vodka, passionfruit, prosecco" },
   ],
@@ -62,13 +62,12 @@ const Menu = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Drinks</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-            The <span className="neon-text-gold">Menu</span>
+          <span className="text-sm uppercase tracking-widest text-rust font-body font-semibold">Drinks</span>
+          <h2 className="font-display text-3xl md:text-5xl mt-2 text-cream">
+            The <span className="text-whiskey">Menu</span>
           </h2>
         </motion.div>
 
-        {/* Category tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -79,10 +78,10 @@ const Menu = () => {
             <button
               key={cat.id}
               onClick={() => setActive(cat.id)}
-              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-display text-sm font-medium transition-all duration-300 ${
+              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-body text-sm font-medium transition-all duration-300 ${
                 active === cat.id
-                  ? "gradient-gold text-primary-foreground neon-glow-gold"
-                  : "glass-card text-muted-foreground hover:text-foreground hover:border-neon-gold/30"
+                  ? "gradient-whiskey text-primary-foreground warm-shadow"
+                  : "rustic-card text-muted-foreground hover:text-foreground hover:border-whiskey/30"
               }`}
             >
               <cat.icon className="w-4 h-4" />
@@ -91,7 +90,6 @@ const Menu = () => {
           ))}
         </motion.div>
 
-        {/* Menu grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {menuItems[active]?.map((item, i) => (
             <motion.div
@@ -99,30 +97,29 @@ const Menu = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="glass-card rounded-xl p-6 group hover:border-neon-gold/40 transition-all duration-300 cursor-default"
+              className="rustic-card p-6 group hover:border-whiskey/40 transition-all duration-300 cursor-default"
             >
               <div className="flex items-start justify-between mb-2">
-                <h3 className="font-display font-bold text-lg group-hover:neon-text-gold transition-all duration-300">
+                <h3 className="font-display text-base group-hover:text-whiskey transition-all duration-300 text-cream">
                   {item.name}
                 </h3>
-                <span className="text-neon-amber font-display font-bold text-lg shrink-0 ml-3">{item.price}</span>
+                <span className="text-whiskey font-body font-bold text-lg shrink-0 ml-3">{item.price}</span>
               </div>
               <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Fun element */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card border-neon-amber/30">
-            <Sparkles className="w-5 h-5 text-neon-amber" />
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-md rustic-card border-whiskey/20">
+            <Sparkles className="w-5 h-5 text-rust" />
             <span className="text-sm font-body text-muted-foreground">
-              Can't decide? Ask your bartender for a <span className="neon-text-amber font-semibold">surprise shot!</span>
+              Can't decide? Ask your bartender for a <span className="text-whiskey font-semibold">surprise shot!</span>
             </span>
           </div>
         </motion.div>

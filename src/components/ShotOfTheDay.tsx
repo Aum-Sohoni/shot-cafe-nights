@@ -14,14 +14,14 @@ const ShotOfTheDay = () => {
       transition={{ duration: 0.6 }}
       className="fixed bottom-20 right-4 z-40 hidden md:block"
     >
-      <div className="glass-card neon-border-gold rounded-xl p-5 max-w-[220px] animate-float">
+      <div className="rustic-card border-whiskey/40 p-5 max-w-[220px] animate-float warm-shadow">
         <div className="flex items-center gap-2 mb-2">
-          <Flame className="w-5 h-5 text-neon-amber" />
-          <span className="text-xs uppercase tracking-widest text-neon-amber font-display">Shot of the Day</span>
+          <Flame className="w-5 h-5 text-rust" />
+          <span className="text-xs uppercase tracking-widest text-rust font-body font-semibold">Shot of the Day</span>
         </div>
-        <h4 className="font-display font-bold text-lg neon-text-gold">Riga Firecracker</h4>
+        <h4 className="font-display text-base text-whiskey">Riga Firecracker</h4>
         <p className="text-xs text-muted-foreground font-body mt-1">Vodka, tabasco & lime</p>
-        <p className="text-neon-amber font-display font-bold mt-2">€4.50</p>
+        <p className="text-whiskey font-body font-bold mt-2">€4.50</p>
       </div>
     </motion.div>
   );
