@@ -24,7 +24,7 @@ const Reviews = () => {
         >
           <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Reviews</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-            What They <span className="neon-text-pink">Say</span>
+            What They <span className="neon-text-gold">Say</span>
           </h2>
         </motion.div>
 

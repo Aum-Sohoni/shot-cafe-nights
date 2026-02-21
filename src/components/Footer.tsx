@@ -1,4 +1,5 @@
 import { Instagram, Facebook, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const links = [
@@ -12,14 +13,14 @@ const Footer = () => {
   return (
     <footer className="border-t border-border/50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* CTA */}
         <div className="text-center mb-12">
+          <img src={logo} alt="Shot Cafe" className="w-20 h-20 rounded-xl mx-auto mb-6" />
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-4">
-            Start your night at <span className="neon-text-pink">Shot Cafe</span>
+            Start your night at <span className="neon-text-gold">Shot Cafe</span>
           </h3>
           <a
             href="#location"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-display font-semibold gradient-neon text-primary-foreground hover:opacity-90 transition-all neon-glow-pink"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-display font-semibold gradient-gold text-primary-foreground hover:opacity-90 transition-all neon-glow-gold"
           >
             <MapPin className="w-5 h-5" />
             Get Directions
@@ -27,8 +28,11 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-border/30">
-          <div className="font-display text-lg font-bold">
-            <span className="neon-text-pink">SHOT</span> CAFE
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Shot Cafe" className="w-8 h-8 rounded-md" />
+            <span className="font-display text-lg font-bold">
+              <span className="neon-text-gold">SHOT</span> CAFE
+            </span>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
@@ -40,10 +44,10 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4">
-            <a href="#" className="text-muted-foreground hover:text-neon-pink transition-colors" aria-label="Instagram">
+            <a href="#" className="text-muted-foreground hover:text-neon-gold transition-colors" aria-label="Instagram">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-neon-pink transition-colors" aria-label="Facebook">
+            <a href="#" className="text-muted-foreground hover:text-neon-gold transition-colors" aria-label="Facebook">
               <Facebook className="w-5 h-5" />
             </a>
           </div>

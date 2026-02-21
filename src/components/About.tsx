@@ -23,7 +23,7 @@ const About = () => {
         >
           <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Est. Riga</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-6">
-            Where Every Night Is <span className="neon-text-pink">Legendary</span>
+            Where Every Night Is <span className="neon-text-gold">Legendary</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-body leading-relaxed">
             Tucked away in the cobblestone streets of Riga's Old Town, Shot Cafe has been the go-to 
@@ -39,9 +39,9 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-              className="glass-card rounded-xl p-8 text-center group hover:border-neon-pink/40 transition-all duration-300"
+              className="glass-card rounded-xl p-8 text-center group hover:border-neon-gold/40 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl gradient-neon flex items-center justify-center mx-auto mb-5 group-hover:neon-glow-pink transition-all">
+              <div className="w-14 h-14 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-5 group-hover:neon-glow-gold transition-all">
                 <f.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl font-bold mb-2">{f.title}</h3>

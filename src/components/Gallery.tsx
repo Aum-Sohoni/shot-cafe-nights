@@ -34,7 +34,7 @@ const Gallery = () => {
           >
             <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Vibes</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-              The <span className="neon-text-pink">Gallery</span>
+              The <span className="neon-text-gold">Gallery</span>
             </h2>
           </motion.div>
 
@@ -72,7 +72,7 @@ const Gallery = () => {
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-6 right-6 p-2 rounded-full glass-card text-foreground hover:text-neon-pink transition-colors"
+            className="absolute top-6 right-6 p-2 rounded-full glass-card text-foreground hover:text-neon-gold transition-colors"
           >
             <X className="w-6 h-6" />
           </button>

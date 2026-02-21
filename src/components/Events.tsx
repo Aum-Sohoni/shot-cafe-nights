@@ -36,7 +36,7 @@ const Events = () => {
   return (
     <section id="events" className="py-24 px-4 relative" ref={ref}>
       {/* Subtle neon bg glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neon-purple/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neon-gold/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -47,7 +47,7 @@ const Events = () => {
         >
           <span className="text-sm uppercase tracking-widest text-neon-amber font-display">Party</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-            Events & <span className="neon-text-pink">Celebrations</span>
+            Events & <span className="neon-text-gold">Celebrations</span>
           </h2>
         </motion.div>
 
@@ -58,10 +58,10 @@ const Events = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 + i * 0.1 }}
-              className="glass-card rounded-xl p-8 group hover:border-neon-pink/40 transition-all duration-300"
+              className="glass-card rounded-xl p-8 group hover:border-neon-gold/40 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg gradient-neon flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center shrink-0">
                   <e.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div className="flex-1">

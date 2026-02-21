@@ -1,25 +1,33 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpg";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Shot Cafe nightlife atmosphere" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8"
+        >
+          <img src={logo} alt="Shot Cafe logo" className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-xl shadow-2xl" />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.15 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 text-sm text-muted-foreground">
-            <MapPin className="w-4 h-4 text-neon-pink" />
+            <MapPin className="w-4 h-4 text-neon-gold" />
             Old Town Riga, Latvia
           </div>
         </motion.div>
@@ -27,18 +35,18 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
         >
           Riga's Ultimate{" "}
-          <span className="neon-text-pink animate-neon-flicker">Shot</span>{" "}
+          <span className="neon-text-gold animate-neon-flicker">Shot</span>{" "}
           Experience
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.45 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-body"
         >
           50+ signature shots, craft cocktails, and unforgettable nights in the heart of Old Town. 
@@ -48,18 +56,18 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
             href="#menu"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold text-primary-foreground gradient-neon hover:opacity-90 transition-all neon-glow-pink"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold text-primary-foreground gradient-gold hover:opacity-90 transition-all neon-glow-gold"
           >
             View Menu
           </a>
           <a
             href="#location"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold glass-card text-foreground hover:border-neon-pink/50 transition-all"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-display font-semibold glass-card text-foreground hover:border-neon-gold/50 transition-all"
           >
             <Clock className="w-4 h-4 mr-2" />
             Visit Us Tonight
