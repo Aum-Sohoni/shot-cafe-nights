@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -18,7 +21,7 @@ const Hero = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full rustic-card mb-6 text-sm text-muted-foreground">
             <MapPin className="w-4 h-4 text-whiskey" />
-            Old Town Riga, Latvia
+            {t("hero.badge")}
           </div>
         </motion.div>
 
@@ -28,9 +31,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="font-display text-4xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-cream"
         >
-          Riga's Ultimate{" "}
-          <span className="text-whiskey">Shot</span>{" "}
-          Experience
+          {t("hero.title1")}{" "}
+          <span className="text-whiskey">{t("hero.title2")}</span>{" "}
+          {t("hero.title3")}
         </motion.h1>
 
         <motion.p
@@ -40,8 +43,7 @@ const Hero = () => {
           className="text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-8 font-body drop-shadow-lg"
           style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}
         >
-          50+ signature shots, craft cocktails, and unforgettable nights in the heart of Old Town. 
-          Where every round starts a new story.
+          {t("hero.subtitle")}
         </motion.p>
 
         <motion.div
@@ -54,14 +56,14 @@ const Hero = () => {
             href="#menu"
             className="inline-flex items-center justify-center px-8 py-4 rounded-md font-display text-primary-foreground gradient-whiskey hover:opacity-90 transition-all warm-shadow"
           >
-            View Menu
+            {t("hero.viewMenu")}
           </a>
           <a
             href="#location"
             className="inline-flex items-center justify-center px-8 py-4 rounded-md font-display rustic-card text-foreground hover:border-whiskey/50 transition-all"
           >
             <Clock className="w-4 h-4 mr-2" />
-            Visit Us Tonight
+            {t("hero.visitUs")}
           </a>
         </motion.div>
 

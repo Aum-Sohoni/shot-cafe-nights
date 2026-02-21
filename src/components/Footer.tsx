@@ -1,13 +1,16 @@
 import { Instagram, Facebook, MapPin } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   const links = [
-    { label: "About", href: "#about" },
-    { label: "Menu", href: "#menu" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Events", href: "#events" },
-    { label: "Contact", href: "#location" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.menu"), href: "#menu" },
+    { label: t("nav.gallery"), href: "#gallery" },
+    { label: t("footer.events"), href: "#events" },
+    { label: t("nav.contact"), href: "#location" },
   ];
 
   return (
@@ -16,14 +19,14 @@ const Footer = () => {
         <div className="text-center mb-12">
           <img src={logo} alt="Shot Cafe" className="w-20 h-20 rounded-lg mx-auto mb-6" />
           <h3 className="font-display text-2xl md:text-3xl mb-4 text-cream">
-            Start your night at <span className="text-whiskey">Shot Cafe</span>
+            {t("footer.cta")} <span className="text-whiskey">Shot Cafe</span>
           </h3>
           <a
             href="#location"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-md font-display text-primary-foreground gradient-whiskey hover:opacity-90 transition-all warm-shadow"
           >
             <MapPin className="w-5 h-5" />
-            Get Directions
+            {t("nav.directions")}
           </a>
         </div>
 
