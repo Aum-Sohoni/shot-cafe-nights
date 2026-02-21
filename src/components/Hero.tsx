@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.jpg";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 
 const Hero = () => {
@@ -12,15 +11,6 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
-        >
-          <img src={logo} alt="Shot Cafe logo" className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-xl shadow-2xl" />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
